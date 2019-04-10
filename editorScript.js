@@ -1,16 +1,20 @@
 (function () {
     let appToken
-    let sdk
+    let editorSDK
+
+    const skipItWidget = '488ddfc1-2886-4112-947b-b2054f4150c7'
 
     module.exports = {
-        editorReady: async function (_editorSDK, _appToken, options) {
-            sdk = _editorSDK
+        editorReady: async function (_editorSDK, _appToken, {firstInstall}) {
+            editorSDK = _editorSDK
             appToken = _appToken
 
-            if (options.firstInstall) {
-
+            if (firstInstall) {
+                editorSDK.application.install('token', {appDefinitionId: skipItWidget})
             }
         },
-        onEvent: function (args) {},
+        onEvent: function (args) {
+
+        },
     }
 })()
