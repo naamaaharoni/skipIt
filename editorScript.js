@@ -17,7 +17,7 @@
             if (firstInstall) {
                 await editorSDK.application.install(appToken, {appDefinitionId: skipItAppDefId})
 
-                const publicApi = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: skipItWidget})
+                const publicApi = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: skipItAppDefId})
                 await publicApi.addWidget(skipItWidgetId)
 
                 const firstPageRef = await editorSDK.pages.getCurrent()
