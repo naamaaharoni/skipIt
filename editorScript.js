@@ -19,6 +19,8 @@
                 await publicApi.addWidget(skipperWidget)
 
                 await editorSDK.application.install(appToken, {appDefinitionId: adminPagesApp})
+
+                console.log('aaaaaaaaaaaaa')
             }
         },
         onEvent: function (args) {
