@@ -23,7 +23,7 @@
                 // await editorSDK.application.install(appToken, {appDefinitionId: adminPagesApp})
 
                 await editorSDK.application.install(appToken, {appDefinitionId: adminWidget})
-                const pageRef = editorSDK.pages.add(appToken, {title: 'skipIt-manager', hidePage: true})
+                const pageRef = await editorSDK.pages.add(appToken, {title: 'skipIt-manager', hidePage: true})
                 await editorSDK.pages.permissions.updatePagePassword(appToken, {pageRef, plainPassword: '1111'})
                 await publicApi.addWidget(adminWidget)
 
