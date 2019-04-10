@@ -6,7 +6,7 @@
     const skipItAppDefId = '488ddfc1-2886-4112-947b-b2054f4150c7'
     const skipItWidgetId = 'rjvq0'
     // const adminPagesApp = '1514b01b-cb08-41b4-8582-0a88551ac769'
-    const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
+    // const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
     const adminWidgetId = 'aaaa'
 
     module.exports = {
@@ -24,7 +24,7 @@
 
                 // await editorSDK.application.install(appToken, {appDefinitionId: adminPagesApp})
 
-                await editorSDK.application.install(appToken, {appDefinitionId: adminAppDefId})
+                // await editorSDK.application.install(appToken, {appDefinitionId: adminAppDefId})
                 const pageRef = await editorSDK.pages.add(appToken, {title: 'skipIt-manager', hidePage: true})
                 await editorSDK.pages.permissions.updatePagePassword(appToken, {pageRef, plainPassword: '1111'})
                 await publicApi.addWidget(adminWidgetId)
