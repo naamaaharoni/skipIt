@@ -14,7 +14,7 @@
             if (firstInstall) {
                 await editorSDK.application.install(appToken, {appDefinitionId: skipItWidget})
 
-                const publicApi = await editorSDK.application.getPublicApi(appToken, {appDefinitionId: skipItWidget})
+                const publicApi = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: skipItWidget})
                 await publicApi.addWidget(skipperWidget)
             }
         },
