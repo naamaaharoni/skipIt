@@ -7,7 +7,7 @@
     const skipItWidgetId = 'rjvq0'
     // const adminPagesApp = '1514b01b-cb08-41b4-8582-0a88551ac769'
     // const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
-    const adminWidgetId = 'aaaa'
+    const adminWidgetId = 'spmvn'
 
     module.exports = {
         editorReady: async function (_editorSDK, _appToken, {firstInstall}) {
