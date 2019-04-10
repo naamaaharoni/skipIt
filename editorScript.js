@@ -14,15 +14,20 @@
 
             if (firstInstall) {
                 await editorSDK.application.install(appToken, {appDefinitionId: skipItWidget})
-                await editorSDK.application.install(appToken, {appDefinitionId: adminWidget})
 
                 const publicApi = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: skipItWidget})
                 await publicApi.addWidget(skipperWidget)
 
+                const firstPageRef = await editorSDK.pages.getCurrent()
+
                 // await editorSDK.application.install(appToken, {appDefinitionId: adminPagesApp})
-                const pageRef = editorSDK.pages.add(appToken, {title: 'skipIt-manager'})
+
+                await editorSDK.application.install(appToken, {appDefinitionId: adminWidget})
+                const pageRef = editorSDK.pages.add(appToken, {title: 'skipIt-manager', hidePage: true})
                 await editorSDK.pages.permissions.hasPassword(appToken, {pageRef})
-                await publicApi.addWidget(adminWidget, {pageRef})
+                await publicApi.addWidget(adminWidget)
+
+                await editorSDK.pages.navigateTo(appToken, {pageRef: firstPageRef})
             }
         },
         onEvent: function (args) {
