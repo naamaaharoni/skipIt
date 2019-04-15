@@ -7,7 +7,7 @@
     const userAppDefId = '488ddfc1-2886-4112-947b-b2054f4150c7'
     const skipItWidgetId = 'vr54u'
 
-    const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
+    const adminAppDefId = 'd86ece7e-366f-41c8-8413-409691b63734'
     const adminWidgetId = 'rjvq0'
 
     module.exports = {
