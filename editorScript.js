@@ -22,12 +22,13 @@
                 const publicApiUser = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: userAppDefId})
                 await publicApiUser.addWidget(skipItWidgetId)
 
+                const firstPageRef = await editorSDK.pages.getCurrent()
                 const pageRef = await editorSDK.pages.add(appToken, {title: 'skipIt-manager', definition: {data: {hidePage: true, pageUriSEO: 'skipit-manager'}}})
                 await editorSDK.pages.permissions.updatePagePassword(appToken, {pageRef, plainPassword: '1234'})
                 const publicApiAdmin = await editorSDK.application.getPublicAPI(appToken, {appDefinitionId: adminAppDefId})
-                await publicApiUser.addWidget(adminWidgetId)
+                await publicApiAdmin.addWidget(adminWidgetId)
 
-                //await editorSDK.pages.navigateTo(appToken, {pageRef: firstPageRef})
+                await editorSDK.pages.navigateTo(appToken, {pageRef: firstPageRef})
             }
         },
         onEvent: function (args) {
