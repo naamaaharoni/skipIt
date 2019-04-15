@@ -3,12 +3,12 @@
     let editorSDK
 
     const platformAppDefId = '14e39e43-faf2-be79-f3dc-802b887353fc'
+
     const userAppDefId = '488ddfc1-2886-4112-947b-b2054f4150c7'
-    const skipItWidgetId = 'rjvq0'
-    // const adminPagesApp = '1514b01b-cb08-41b4-8582-0a88551ac769'
-    // const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
-    const adminWidgetId = 'spmvn'
+    const skipItWidgetId = 'vr54u'
+
     const adminAppDefId = '9f0bf992-eaff-4467-92a6-6a5d6696337a'
+    const adminWidgetId = 'rjvq0'
 
     module.exports = {
         editorReady: async function (_editorSDK, _appToken, {firstInstall}) {
